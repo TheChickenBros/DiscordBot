@@ -14,5 +14,11 @@ module.exports = {
         canva.write(image, 'files/cmm.png');
 
 		main.sendEmbed(reply, reply, msg.channel, 'files/cmm.png', true);
+
+		try {
+			fs.unlinkSync('./files/cmm.png');
+		} catch(err) {
+			console.error(err);
+		}
 	},
 };

@@ -24,6 +24,12 @@ module.exports = {
 
         canva.write(canva.gay('./gay.png'), 'gay.png');
         msg.channel.send('', {files: ['./gay.png']});
-		//main.sendEmbed(reply, reply, msg.channel, 'gay.png', true);
+        //main.sendEmbed(reply, reply, msg.channel, 'gay.png', true);
+        
+        try {
+			fs.unlinkSync('./gay.png');
+		} catch(err) {
+			console.error(err);
+		}
 	},
 };
