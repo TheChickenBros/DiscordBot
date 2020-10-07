@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 const Levels = require("discord-xp");
 const fs = require('fs');
 const { prefix, token, welcomeChannel } = require('./config.json');
+require('dotenv').config();
 
 //Discord client constructor
 const client = new Discord.Client();
@@ -62,6 +63,7 @@ function sendEmbed(title, message, channel, img, isAttachment) {
 
 //Add random xp when a user sends a message
 async function addRandomXP(msg) {
+    if (msg.author.id === client.user.id) {return;}
     const randomXP = randomBetween(1, 30); // Min 1, Max 30
     const hasLeveledUp = await Levels.appendXp(msg.author.id, msg.guild.id, randomXP);
     console.log(randomXP);
@@ -144,4 +146,4 @@ client.on('guildCreate', guild => {
 
 });
 
-client.login(token);
+client.login(process.env.DISCORD_BOT_SECRET);
