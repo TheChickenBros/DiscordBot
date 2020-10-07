@@ -68,7 +68,7 @@ async function addRandomXP(msg) {
     const hasLeveledUp = await Levels.appendXp(msg.author.id, msg.guild.id, randomXP);
     console.log(randomXP);
     if (hasLeveledUp) {
-        const user = await Levels.fetch(message.author.id, message.guild.id);
+        const user = await Levels.fetch(msg.author.id, msg.guild.id);
         msg.channel.send(`${msg.author}, congratulations! You have leveled up to **${user.level}**. :tada:`);
     }
 }
