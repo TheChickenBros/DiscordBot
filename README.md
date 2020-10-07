@@ -1,6 +1,10 @@
 # Terrible Discord Bot
 
 ***
+DONT INSTALLLLLLLLL
+THIS IS NOT A GOOD DISCORD BOT THERE ARE THOUSANDS OF OTHERS
+ALSO I DON'T KNOW HOW TO CORRECTLY TELL YOU HOW TO INSTALL IT
+DONT INSTALLLLLLLLL
 
 #### Installation
 1. Download Node.js from the [official website](https://nodejs.org/en/ "Node.js offical website").
